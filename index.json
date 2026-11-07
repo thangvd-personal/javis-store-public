@@ -2390,6 +2390,39 @@
       "description": {
         "vi": "Toàn bộ API Cloudflare ngay trong chat qua MCP chính chủ: DNS, Workers, Pages, KV, R2, D1, tường lửa, SSL, cache, thống kê lưu lượng, Zero Trust. Dán API token là xong, quyền của token quyết định Javis được làm gì."
       },
+      "version": "1.0.1",
+      "author": {
+        "name": "Javis"
+      },
+      "category": "lap-trinh",
+      "category_label": {
+        "vi": "Lập trình"
+      },
+      "tier": "data",
+      "verified": true,
+      "updated": "2026-11-05",
+      "homepage": "https://github.com/blogminhquy/javis-store/tree/main/packs/javis.cloudflare",
+      "icon": "packs/javis.cloudflare/assets/cloudflare.jpg",
+      "provides": {
+        "connectors": [
+          "cloudflare"
+        ]
+      },
+      "download": {
+        "url": "dist/javis-cloudflare-1.0.1.zip",
+        "sha256": "61d57c874acf326380f4336b06744311092c643905bd4adb17d5066291653284",
+        "size": 5306
+      }
+    },
+    {
+      "id": "javis.cloudflare-oauth",
+      "kind": "connector",
+      "name": {
+        "vi": "Cloudflare (đăng nhập web)"
+      },
+      "description": {
+        "vi": "Cùng MCP chính chủ của Cloudflare nhưng không cần tạo API token: bấm Kết nối, đăng nhập Cloudflare rồi tick quyền muốn cấp ngay trên trang của Cloudflare."
+      },
       "version": "1.0.0",
       "author": {
         "name": "Javis"
@@ -2400,18 +2433,18 @@
       },
       "tier": "data",
       "verified": true,
-      "updated": "2026-10-02",
-      "homepage": "https://github.com/blogminhquy/javis-store/tree/main/packs/javis.cloudflare",
-      "icon": "packs/javis.cloudflare/assets/cloudflare.jpg",
+      "updated": "2026-11-05",
+      "homepage": "https://github.com/blogminhquy/javis-store/tree/main/packs/javis.cloudflare-oauth",
+      "icon": "packs/javis.cloudflare-oauth/assets/cloudflare.jpg",
       "provides": {
         "connectors": [
-          "cloudflare"
+          "cloudflare-oauth"
         ]
       },
       "download": {
-        "url": "dist/javis-cloudflare-1.0.0.zip",
-        "sha256": "9c2957c3cae63a1c0cf3f5042e448f56ba1d1093c60b365a37328a195c35d750",
-        "size": 5258
+        "url": "dist/javis-cloudflare-oauth-1.0.0.zip",
+        "sha256": "6538fee6d5e64d3c94c92c5935c231c874504afade02068f789e058ae6de3dcd",
+        "size": 4735
       }
     },
     {
@@ -2421,9 +2454,9 @@
         "vi": "Cloudflare Deploy (Wrangler)"
       },
       "description": {
-        "vi": "Deploy Worker và trang web tĩnh lên Cloudflare bằng Wrangler ngay trong chat, bộ não nào cũng dùng được. Dùng lại API token của gói Cloudflare, không phải dán lần hai. Deploy thật chỉ chạy khi kết nối Cloudflare ở mức Toàn quyền. Cần Node.js 20+ trên máy chạy Javis."
+        "vi": "Deploy Worker và trang web tĩnh lên Cloudflare bằng Wrangler ngay trong chat, bộ não nào cũng dùng được. Dùng lại API token của kết nối Cloudflare (cách Dán API token), không phải dán lần hai. Deploy thật chỉ chạy khi kết nối Cloudflare ở mức Toàn quyền. Cần Node.js 20+ trên máy chạy Javis."
       },
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Javis"
       },
@@ -2433,7 +2466,7 @@
       },
       "tier": "code",
       "verified": true,
-      "updated": "2026-10-02",
+      "updated": "2026-11-05",
       "homepage": "https://github.com/blogminhquy/javis-store/tree/main/packs/javis.cloudflare-deploy",
       "icon": "packs/javis.cloudflare-deploy/assets/cloudflare-deploy.jpg",
       "provides": {
@@ -2445,9 +2478,9 @@
         ]
       },
       "download": {
-        "url": "dist/javis-cloudflare-deploy-1.0.0.zip",
-        "sha256": "47632c844aad721d3fb0bf9b3c7b58219df5ccb1dbc3d0cb9b0a7f794dc8e2e5",
-        "size": 13318
+        "url": "dist/javis-cloudflare-deploy-1.0.1.zip",
+        "sha256": "3c09ebb26e9b159d16f8792e68941dfeaa9304d5c3af54e4998e59b9e27e4213",
+        "size": 13394
       }
     },
     {
@@ -15333,6 +15366,73 @@
         "url": "dist/javis-agency-zk-steward-1.0.0.zip",
         "sha256": "ff350767bf0430a9dab828a44cffca53c2fe67a07fbd20eea80cb1dfa5a4b49c",
         "size": 7166
+      }
+    },
+    {
+      "id": "javis.claude-seo",
+      "kind": "skill",
+      "name": {
+        "vi": "Claude SEO: Kiểm tra và tối ưu SEO",
+        "en": "Claude SEO: Audit and optimise SEO"
+      },
+      "description": {
+        "vi": "24 skill SEO của Claude SEO: kiểm tra cả website, phân tích từng trang, SEO kỹ thuật và Core Web Vitals, schema, sitemap, nội dung E-E-A-T, SEO địa phương, thương mại điện tử, backlink, SEO cho AI (GEO). Cần Python 3.11 trở lên.",
+        "en": "24 Claude SEO skills: full site audits, single-page analysis, technical SEO and Core Web Vitals, schema, sitemaps, E-E-A-T content, local SEO, ecommerce, backlinks and AI search (GEO). Needs Python 3.11 or newer."
+      },
+      "version": "1.0.2",
+      "author": {
+        "name": "AgriciDaniel",
+        "url": "https://github.com/AgriciDaniel/claude-seo"
+      },
+      "category": "marketing",
+      "category_label": {
+        "vi": "Marketing",
+        "en": "Marketing"
+      },
+      "tier": "code",
+      "verified": true,
+      "updated": "2026-11-06",
+      "homepage": "https://github.com/blogminhquy/javis-store/tree/main/packs/javis.claude-seo",
+      "source": "https://github.com/AgriciDaniel/claude-seo",
+      "license": "MIT",
+      "upstream": {
+        "repo": "AgriciDaniel/claude-seo",
+        "ref": "main",
+        "commit": "6be93f45064ffbadced572b5d5c95f55fd263af0",
+        "synced": "2026-11-06"
+      },
+      "provides": {
+        "skills": [
+          "seo",
+          "seo-agentic",
+          "seo-audit",
+          "seo-backlinks",
+          "seo-cluster",
+          "seo-competitor-pages",
+          "seo-content",
+          "seo-content-brief",
+          "seo-drift",
+          "seo-ecommerce",
+          "seo-flow",
+          "seo-geo",
+          "seo-google",
+          "seo-hreflang",
+          "seo-images",
+          "seo-local",
+          "seo-maps",
+          "seo-page",
+          "seo-plan",
+          "seo-programmatic",
+          "seo-schema",
+          "seo-sitemap",
+          "seo-sxo",
+          "seo-technical"
+        ]
+      },
+      "download": {
+        "url": "dist/javis-claude-seo-1.0.2.zip",
+        "sha256": "27533246873c23ab3b510e461c1aee3e6dbf619c68b9911e8d07a0da7af3171c",
+        "size": 676402
       }
     }
   ]
